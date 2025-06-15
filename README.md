@@ -322,4 +322,4 @@ This contract is for educational and development purposes. Ensure thorough testi
 
 ---
 
-**Built with ❤️ for the StarkNet ecosystem**
+**Built with ❤️ for the Healthcare ecosystem**
