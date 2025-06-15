@@ -24,69 +24,19 @@ Deployed Contract :- [0x07e0b09cc6209d4211f150944e7fc0dab7338f0a3a6199ff96d4667b
 
 ## 🚀 Quick Start
 
-### Prerequisites
+📋 **For detailed setup, deployment, and development instructions, see [Setup.md](Setup.md)**
 
-- [Scarb](https://docs.swmansion.com/scarb/) - Cairo package manager
-- [Starknet Foundry](https://foundry-rs.github.io/starknet-foundry/) - Testing framework
-- [Starkli](https://github.com/xJonathanLEI/starkli) - StarkNet CLI (for deployment)
-
-### Installation
+### Quick Commands
 
 ```bash
-# Clone the repository
-git clone <your-repo-url>
-cd meditoken
-
-# Install dependencies
+# Build the contract
 scarb build
-```
 
-### Testing
-
-```bash
 # Run all tests
 snforge test
 
-# Run specific test category
-snforge test test_airdrop  # Airdrop tests
-snforge test test_constructor  # Basic ERC20 tests
-
-# Run with verbose output
-snforge test -v
-```
-
-### Deployment
-
-#### Local/Testnet Deployment
-
-```bash
-# 1. Build the contract
-scarb build
-
-# 2. Declare the contract (replace with your account details)
-starkli declare target/dev/meditoken_MedToken.contract_class.json \
-    --account <your-account> \
-    --keystore <your-keystore>
-
-# 3. Deploy the contract
-# Parameters: initial_tokens (felt252), recipient (ContractAddress)
-starkli deploy <class-hash> \
-    1000 \
-    0x1234567890123456789012345678901234567890123456789012345678901234 \
-    --account <your-account> \
-    --keystore <your-keystore>
-```
-
-#### Mainnet Deployment
-
-**⚠️ Warning**: Thoroughly test on testnets before mainnet deployment!
-
-```bash
-# Use --network mainnet flag
-starkli declare target/dev/meditoken_MedToken.contract_class.json \
-    --network mainnet \
-    --account <your-account> \
-    --keystore <your-keystore>
+# Deploy to testnet (after setup)
+starkli deploy <class-hash> <initial_tokens> <recipient_address>
 ```
 
 ## 📋 Contract Interface
@@ -170,33 +120,18 @@ Returns the number of airdrop slots remaining (20 - claimed count).
 
 ## 🧪 Testing Coverage
 
-The contract includes comprehensive tests covering:
+📋 **For complete testing guide, test coverage details, and how to write new tests, see [TESTING.md](TESTING.md)**
 
-### ERC20 Functionality
+The contract includes **15 comprehensive tests** covering:
 
-- ✅ Constructor initialization
-- ✅ Token transfers (standard and edge cases)
-- ✅ Approval and allowance mechanisms
-- ✅ Transfer from functionality
-- ✅ Balance and supply tracking
-- ✅ Decimal calculations
+### Quick Test Overview
 
-### Airdrop System
+- ✅ **ERC20 Functionality** (9 tests): Constructor, transfers, approvals, edge cases
+- ✅ **Airdrop System** (6 tests): Claims, security, state tracking, integration
+- ✅ **Security Features**: Balance checks, double-claim prevention, limit enforcement
+- ✅ **Edge Cases**: Zero transfers, self transfers, insufficient balance scenarios
 
-- ✅ Successful airdrop claims
-- ✅ Double-claim prevention
-- ✅ Multiple user claims
-- ✅ Limit enforcement
-- ✅ State tracking accuracy
-- ✅ Integration with ERC20 functions
-
-### Edge Cases
-
-- ✅ Zero transfers
-- ✅ Self transfers
-- ✅ Insufficient balance scenarios
-- ✅ Insufficient allowance scenarios
-- ✅ Multiple approvals
+**Current Status**: `Tests: 15 passed, 0 failed, 0 skipped`
 
 ## 📈 Usage Examples
 
@@ -246,33 +181,25 @@ meditoken/
 │   └── test_contract.cairo    # Comprehensive test suite
 ├── Scarb.toml                 # Project configuration
 ├── snfoundry.toml            # Foundry configuration
-└── README.md                 # This file
+├── README.md                 # This file - project overview
+├── Setup.md                  # Detailed setup and deployment guide
+└── TESTING.md                # Complete testing guide and coverage
 ```
 
 ## 🔧 Development
 
-### Building
+📋 **For complete development setup and workflow, see [Setup.md](Setup.md)**
+
+### Quick Commands
 
 ```bash
+# Build the contract
 scarb build
-```
 
-### Testing
-
-```bash
 # Run all tests
 snforge test
 
-# Run with verbose output
-snforge test -v
-
-# Run specific test
-snforge test test_airdrop_claim_successful
-```
-
-### Code Formatting
-
-```bash
+# Format code
 scarb fmt
 ```
 
@@ -315,10 +242,14 @@ This contract is for educational and development purposes. Ensure thorough testi
 
 ## 🔗 Links
 
-- [Cairo Documentation](https://book.cairo-lang.org/)
-- [StarkNet Documentation](https://docs.starknet.io/)
-- [OpenZeppelin Cairo Contracts](https://github.com/OpenZeppelin/cairo-contracts)
-- [Starknet Foundry](https://foundry-rs.github.io/starknet-foundry/)
+📋 **Setup & Deployment**: [Setup.md](Setup.md) - Complete setup and deployment guide  
+🧪 **Testing Guide**: [TESTING.md](TESTING.md) - Comprehensive testing documentation
+
+### Project Resources
+
+- **Deployed Contract**: [Sepolia Testnet](https://sepolia.starkscan.co/token/0x07e0b09cc6209d4211f150944e7fc0dab7338f0a3a6199ff96d4667bef0e68bc)
+- **Source Code**: Available in `src/contracts/meditoken.cairo`
+- **Test Suite**: Available in `tests/test_contract.cairo`
 
 ---
 
