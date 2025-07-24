@@ -15,10 +15,10 @@ This guide will walk you through setting up, building, testing, and deploying th
 ```bash
 # Clone the repository (if you have a remote)
 git clone <your-repo-url>
-cd meditoken
+cd ppttoken
 
 # Or if working locally
-cd /path/to/your/meditoken
+cd /path/to/your/ppttoken
 
 # Install dependencies and build
 scarb build
@@ -43,7 +43,7 @@ snforge test test_airdrop # Run airdrop-specific tests
 
 ```bash
 # Make sure you're in the project directory
-cd /path/to/meditoken
+cd /path/to/ppttoken
 
 # Ensure contract is built
 scarb build
@@ -80,7 +80,7 @@ export STARKNET_RPC=https://starknet-sepolia.public.blastapi.io/rpc/v0_7
 scarb build
 
 # 2. Declare the contract (replace with your account details)
-starkli declare target/dev/meditoken_MedToken.contract_class.json
+starkli declare target/dev/ppttoken_MedToken.contract_class.json
 
 # 3. Deploy the contract
 # Parameters: initial_tokens (felt252), recipient (ContractAddress)
@@ -93,13 +93,13 @@ starkli deploy <class-hash> \
 
 ```bash
 # Navigate to project
-cd /path/to/meditoken
+cd /path/to/ppttoken
 
 # Build the contract
 scarb build
 
 # Declare the contract
-starkli declare target/dev/meditoken_MedToken.contract_class.json
+starkli declare target/dev/ppttoken_MedToken.contract_class.json
 
 # Example output: Class hash declared: 0x1234567890abcdef...
 
@@ -120,7 +120,7 @@ starkli deploy 0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcde
 export STARKNET_RPC=https://starknet-mainnet.public.blastapi.io/rpc/v0_7
 
 # Use same process as testnet
-starkli declare target/dev/meditoken_MedToken.contract_class.json
+starkli declare target/dev/ppttoken_MedToken.contract_class.json
 starkli deploy <class-hash> <initial_tokens> <recipient_address>
 ```
 
@@ -197,14 +197,14 @@ Your MediToken constructor takes 2 parameters:
 
 ## 📁 Important Files
 
-- **Contract Class**: `target/dev/meditoken_MedToken.contract_class.json` - Use this for deployment
-- **Source Code**: `src/contracts/meditoken.cairo` - Main contract implementation
+- **Contract Class**: `target/dev/ppttoken_MedToken.contract_class.json` - Use this for deployment
+- **Source Code**: `src/contracts/ppttoken.cairo` - Main contract implementation
 - **Tests**: `tests/test_contract.cairo` - Comprehensive test suite
 - **Config**: `Scarb.toml` - Project configuration
 
 ## ⚠️ Important Notes
 
-1. **File to use**: Always use `target/dev/meditoken_MedToken.contract_class.json` for deployment
+1. **File to use**: Always use `target/dev/ppttoken_MedToken.contract_class.json` for deployment
 2. **Gas fees**: Ensure your account has enough ETH to pay for declaration and deployment
 3. **Testnet first**: Always test on Sepolia testnet before mainnet deployment
 4. **Save addresses**: Keep track of your declared class hash and deployed contract address

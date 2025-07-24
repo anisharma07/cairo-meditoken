@@ -41,7 +41,7 @@ fn test_constructor() {
     let erc20_metadata = IERC20MetadataDispatcher { contract_address };
     
     // Test metadata
-    assert(erc20_metadata.name() == "Meditoken", 'Wrong name');
+    assert(erc20_metadata.name() == "PPT Token", 'Wrong name');
     assert(erc20_metadata.symbol() == "MED", 'Wrong symbol');
     assert(erc20_metadata.decimals() == 18, 'Wrong decimals');
     

@@ -2,7 +2,7 @@
 
 A comprehensive ERC20 token implementation built on StarkNet with an integrated airdrop mechanism for fair token distribution in the healthcare ecosystem.
 
-Deployed Contract :- [0x07e0b09cc6209d4211f150944e7fc0dab7338f0a3a6199ff96d4667bef0e68bc](https://sepolia.starkscan.co/token/0x07e0b09cc6209d4211f150944e7fc0dab7338f0a3a6199ff96d4667bef0e68bc#read-write-contract-sub-read)
+Deployed Contract :- [0x008c6e8700604e0987069cfb5debf6fd359dc09f00f1c61ddac1e52b6e5ceff4](https://sepolia.starkscan.co/token/0x008c6e8700604e0987069cfb5debf6fd359dc09f00f1c61ddac1e52b6e5ceff4#read-write-contract-sub-read)
 
 ## 🌟 Features
 
@@ -10,7 +10,7 @@ Deployed Contract :- [0x07e0b09cc6209d4211f150944e7fc0dab7338f0a3a6199ff96d4667b
 
 - **Standard ERC20 Implementation**: Full compliance with ERC20 standard using OpenZeppelin Cairo contracts
 - **Token Details**:
-  - Name: `Meditoken`
+  - Name: `PPT Token`
   - Symbol: `MED`
   - Decimals: `18`
   - Precision: `10^18` (1 MED = 1,000,000,000,000,000,000 wei)
@@ -172,11 +172,11 @@ let balance = contract.balance_of(user_address);
 ## 🏗️ Project Structure
 
 ```
-meditoken/
+ppttoken/
 ├── src/
 │   ├── lib.cairo              # Library entry point
 │   └── contracts/
-│       └── meditoken.cairo    # Main contract implementation
+│       └── ppttoken.cairo    # Main contract implementation
 ├── tests/
 │   └── test_contract.cairo    # Comprehensive test suite
 ├── Scarb.toml                 # Project configuration
@@ -248,9 +248,9 @@ This contract is for educational and development purposes. Ensure thorough testi
 ### Project Resources
 
 - **Deployed Contract**: [Sepolia Testnet](https://sepolia.starkscan.co/token/0x07e0b09cc6209d4211f150944e7fc0dab7338f0a3a6199ff96d4667bef0e68bc)
-- **Source Code**: Available in `src/contracts/meditoken.cairo`
+- **Source Code**: Available in `src/contracts/ppttoken.cairo`
 - **Test Suite**: Available in `tests/test_contract.cairo`
 
 ---
 
-**Built with ❤️ for the Healthcare ecosystem**
+**Built with ❤️ for the Healthcare ecosystem under C4GT**

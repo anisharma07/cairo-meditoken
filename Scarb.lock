@@ -2,14 +2,6 @@
 version = 1
 
 [[package]]
-name = "meditoken"
-version = "0.1.0"
-dependencies = [
- "openzeppelin",
- "snforge_std",
-]
-
-[[package]]
 name = "openzeppelin"
 version = "0.20.0"
 source = "git+https://github.com/OpenZeppelin/cairo-contracts?tag=v0.20.0#7756fd1de2b4ebd239fa6e372d75535cea02e5e5"
@@ -114,6 +106,14 @@ source = "git+https://github.com/OpenZeppelin/cairo-contracts?tag=v0.20.0#7756fd
 name = "openzeppelin_utils"
 version = "0.20.0"
 source = "git+https://github.com/OpenZeppelin/cairo-contracts?tag=v0.20.0#7756fd1de2b4ebd239fa6e372d75535cea02e5e5"
+
+[[package]]
+name = "ppttoken"
+version = "0.1.0"
+dependencies = [
+ "openzeppelin",
+ "snforge_std",
+]
 
 [[package]]
 name = "snforge_scarb_plugin"

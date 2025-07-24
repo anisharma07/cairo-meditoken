@@ -89,7 +89,7 @@ snforge --version
 
 ```bash
 # Navigate to project directory
-cd /path/to/meditoken
+cd /path/to/ppttoken
 
 # Build the contract first
 scarb build
@@ -123,7 +123,7 @@ snforge test panic                          # Tests that should panic
 **Successful Test Run:**
 
 ```
-Collected 15 test(s) from meditoken package
+Collected 15 test(s) from ppttoken package
 Running 15 test(s) from tests/
 [PASS] test_constructor (gas: ~680960)
 [PASS] test_transfer (gas: ~1081920)
@@ -238,7 +238,7 @@ scarb build
 scarb clean && scarb build
 
 # Wrong directory
-cd /path/to/meditoken
+cd /path/to/ppttoken
 ```
 
 ### Debugging Tips
